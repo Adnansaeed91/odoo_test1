@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custom_assets_frontend" inherit_id="web_editor.assets_frontend" name="Portal Assets" priority="15">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/vendor_form/static/src/js/portal.js"></script>
+        </xpath>
+    </template>
+        <template id="auth_signup_fields_extend" inherit_id="auth_signup.fields" name="Signup Fields Extend">
+            <xpath expr="//div[hasclass('field-confirm_password')]" position="after">
+                <div class="form-group field-phone">
+                    <label for="phone" class="control-label">Telephone</label>
+                    <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control" required="required" t-att-readonly="'readonly' if only_passwords else None"
+	                t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                </div>
+                <div class="form-group field-mobile">
+                    <label for="phone" class="control-label">Mobile</label>
+                    <input type="text" name="mobile" t-att-value="mobile" id="mobile" class="form-control" required="required" t-att-readonly="'readonly' if only_passwords else None"
+	                t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                </div>
+                <div class="form-group field-corporate_name">
+                    <label for="corporate_name" class="control-label">Corporate name</label>
+                    <input type="text" name="corporate_name" t-att-value="corporate_name" id="corporate_name" class="form-control" required="required" t-att-readonly="'readonly' if only_passwords else None"
+	                t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                </div>
+                <div class="form-group field-vat">
+                    <label for="vat" class="control-label">Tax ID</label>
+                    <input type="text" name="vat" t-att-value="vat" id="vat" class="form-control" required="required" t-att-readonly="'readonly' if only_passwords else None"
+	                t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                </div>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

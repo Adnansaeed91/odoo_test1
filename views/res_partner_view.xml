@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="before">
+                     <field name="corporate_name"/>
+                </xpath>
+            </field>
+        </record>
+         <record id="vendor_rule_for_personal_purchase_orders" model="ir.rule">
+            <field name="name">Purchase Record Rule for vendors</field>
+            <field ref="purchase.model_purchase_order" name="model_id"/>
+            <field name="domain_force">[('user_id','=',user.id)]</field>
+             <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+             <field name="perm_read" eval="True"/>
+            <field name="groups" eval="[(4, ref('vendor_form.group_purchase_vendor'))]"/>
+         </record>
+
+        <menuitem name="Purchase"
+            id="purchase.menu_purchase_root"
+            groups="purchase.group_purchase_manager,purchase.group_purchase_user,vendor_form.group_purchase_vendor"
+            web_icon="purchase,static/description/icon.png"
+            sequence="25"/>
+
+    </data>
+</odoo>
+

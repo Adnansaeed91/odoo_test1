@@ -1,0 +1,22 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+vendor_vendor_access_purchase_bill_union,vendor_access_purchase_bill_union,purchase.model_purchase_bill_union,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_purchase_order,purchase.order,purchase.model_purchase_order,vendor_form.group_purchase_vendor,1,1,1,1
+vendor_access_purchase_order_line,purchase.order.line user,purchase.model_purchase_order_line,vendor_form.group_purchase_vendor,1,1,1,1
+vendor_access_account_tax_purchase_user,account.tax,account.model_account_tax,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_account_tag_purchase_user,account.account.tag,account.model_account_account_tag,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_product_product_purchase_user,product.product.purchase.user,product.model_product_product,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_product_template_purchase_user,product.template purchase_user,product.model_product_template,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_account_fiscal_position_purchase_user,account.fiscal.position purchase,account.model_account_fiscal_position,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_res_partner_purchase_user,res.partner purchase,base.model_res_partner,vendor_form.group_purchase_vendor,1,1,0,0
+
+vendor_access_account_move,account.move,account.model_account_move,vendor_form.group_purchase_vendor,1,1,1,1
+vendor_access_account_move,account.move,account.model_account_move,vendor_form.group_purchase_vendor,1,1,1,1
+vendor_access_account_move_line,account.move.line,account.model_account_move_line,vendor_form.group_purchase_vendor,1,1,1,0
+account_partial_reconcile,account.partial.reconcile.purchase.user,account.model_account_partial_reconcile,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_purchase_bill_union,vendor_access_purchase_bill_union,purchase.model_purchase_bill_union,vendor_form.group_purchase_vendor,1,0,0,0
+vendor_access_report_purchase_order_user,purchase.stock.report user,purchase.model_purchase_report,vendor_form.group_purchase_vendor,1,0,0,0
+
+eta_api_access_user,ETA API USER,model_eta_api,account.group_account_manager,1,1,1,1
+eta_document_types_access_user,ETA Document Types USER,model_eta_document_types,account.group_account_manager,1,1,1,1
+eta_document_versions_access_user,ETA Document Versions USER,model_eta_document_versions,account.group_account_manager,1,1,1,1
+eta_message_wizard,ETA message wizard,model_message_wizard,account.group_account_manager,1,1,1,1
